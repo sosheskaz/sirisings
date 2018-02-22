@@ -9,7 +9,7 @@ Clone or download this repo. Run `install.sh`. Piping to bash won't work.
 
 ## Uninstalling
 
-Run `rm /usr/local/bin/sirisings`. Clean up the dependencies yourself if you really care.
+Run `rm /usr/local/bin/sirisings`. Cleaning up the dependencies is left as an exercise for the reader.
 
 ## Running
 
