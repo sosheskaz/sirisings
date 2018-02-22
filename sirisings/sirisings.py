@@ -50,7 +50,7 @@ def sing_song(singer, song, voice, savefile=None):
             savefile += '.aiff'
         saveargs = ['-o', savefile]
         print 'Saving to {}'.format(savefile)
-    subprocess.call(['say', '-v', voice] + saveargs + [voice, lyrics])
+    subprocess.call(['say', '-v', voice] + saveargs + [lyrics])
 
 
 if __name__ == '__main__':
