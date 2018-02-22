@@ -1,4 +1,5 @@
 #!/usr/bin/env python2 -W ignore
+'''a waste of time'''
 import argparse
 import os
 import subprocess
@@ -8,10 +9,15 @@ from google import google
 
 
 def main():
-    parser = argparse.ArgumentParser(description='this app is kinda crappy, just a heads up')
-    parser.add_argument('song', help='search terms for to find the song', nargs='+')
-    parser.add_argument('-v', '--voice', help='voice for siri to sing with, default is samantha', default='samantha')
-    parser.add_argument('-s', '--save', help='instead of singing it, save it to the specified file so you can enjoy it later')
+    '''runs the code'''
+    parser = argparse.ArgumentParser(description='this app is kinda crappy, \
+just a heads up')
+    parser.add_argument('song', help='search terms for to find the song',
+                        nargs='+')
+    parser.add_argument('-v', '--voice', help='voice for siri to sing with, \
+default is samantha', default='samantha')
+    parser.add_argument('-s', '--save', help='instead of singing it, save it \
+to the specified file so you can enjoy it later')
     args = parser.parse_args()
     candidates = search_for_song(' '.join(args.song))
     for singer, song in candidates:
@@ -24,6 +30,7 @@ def main():
 
 
 def search_for_song(search_terms):
+    '''finds a list of songs from the search terms'''
     search_terms = 'site:lyrics.wikia.com {}'.format(search_terms)
     search_results = google.search(search_terms, 2)
     pairs = (item.link.split('lyrics.wikia.com/wiki/')[1] for item in search_results)
@@ -33,11 +40,12 @@ def search_for_song(search_terms):
 
 
 def sing_song(singer, song, voice, savefile=None):
+    '''sings the song'''
     lyrics = PyLyrics.getLyrics(singer, song)
     print urllib2.unquote('singing {} by {}'.format(song, singer).replace('_', ' '))
     saveargs = []
     if savefile is not None:
-        basename, ext = os.path.splitext(savefile)
+        _, ext = os.path.splitext(savefile)
         if ext.lower() != '.aiff':
             savefile += '.aiff'
         saveargs = ['-o', savefile]

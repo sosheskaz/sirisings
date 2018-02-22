@@ -33,6 +33,18 @@ optional arguments:
 
 You don't need to quote your search terms. Including the artist might help sometimes.
 
+## Quality
+
+This code is top-quality. Pylint said so.
+
+```
+$ pylint sirisings/sirisings.py
+No config file found, using default configuration
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+```
+
 ## Examples
 
 ```bash
