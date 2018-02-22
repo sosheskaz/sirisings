@@ -16,7 +16,7 @@ Run `rm /usr/local/bin/sirisings`. Cleaning up the dependencies is left as an ex
 See `sirisings -h` for the help message at any time. Here it is now.
 
 ```
-usage: sirisings [-h] [-v VOICE] song [song ...]
+usage: sirisings [-h] [-v VOICE] [-s SAVE] song [song ...]
 
 this app is kinda crappy, just a heads up
 
@@ -27,6 +27,8 @@ optional arguments:
   -h, --help            show this help message and exit
   -v VOICE, --voice VOICE
                         voice for siri to sing with, default is samantha
+  -s SAVE, --save SAVE  instead of singing it, save it to the specified file
+                        so you can enjoy it later
 ```
 
 You don't need to quote your search terms. Including the artist might help sometimes.
