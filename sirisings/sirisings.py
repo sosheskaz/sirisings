@@ -18,11 +18,13 @@ just a heads up')
 default is samantha', default='samantha')
     parser.add_argument('-s', '--save', help='instead of singing it, save it \
 to the specified file so you can enjoy it later')
+    parser.add_argument('-l', '--showlyrics', help='show the lyrics',
+                        action='store_true')
     args = parser.parse_args()
     candidates = search_for_song(' '.join(args.song))
     for singer, song in candidates:
         try:
-            sing_song(singer, song, args.voice, args.save)
+            sing_song(singer, song, args.voice, args.save, args.showlyrics)
             return
         except ValueError:
             continue
@@ -39,10 +41,13 @@ def search_for_song(search_terms):
     return list(pairs)
 
 
-def sing_song(singer, song, voice, savefile=None):
+def sing_song(singer, song, voice, savefile=None, showlyrics=False):
     '''sings the song'''
     lyrics = PyLyrics.getLyrics(singer, song)
-    print urllib2.unquote('singing {} by {}'.format(song, singer).replace('_', ' '))
+    print urllib2.unquote('singing {} by {}'.format(song, singer).replace('_',
+                                                                          ' '))
+    if showlyrics:
+        print lyrics
     saveargs = []
     if savefile is not None:
         _, ext = os.path.splitext(savefile)
