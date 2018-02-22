@@ -1,11 +1,11 @@
 # Siri Sings
 
-This app makes siri sing songs using the built-in `sing` command. It's not quite the same as sire,
+This app makes siri sing songs using the built-in `sirising` command. It's not quite the same as sire,
 but meh, close enough.
 
 ## Installing
 
-Clone or download this repo. Run `install.sh`.
+Clone or download this repo. Run `install.sh`. Piping to bash won't work.
 
 ## Uninstalling
 
