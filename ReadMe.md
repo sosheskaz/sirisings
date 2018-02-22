@@ -1,11 +1,11 @@
 # Siri Sings
 
-This app makes siri sing songs using the built-in `sirising` command. It's not quite the same as siri,
+This app makes "siri" "sing" songs using the built-in `say` command. It's not quite the same as siri,
 but meh, close enough.
 
 ## Installing
 
-Clone or download this repo. Run `install.sh`. Piping to bash won't work.
+Clone or download this repo. Run `install.sh`. Piping to bash won't work. Pipe your complaints to `/dev/null`.
 
 ## Uninstalling
 
@@ -33,11 +33,13 @@ optional arguments:
   -l, --showlyrics      show the lyrics
 ```
 
-You don't need to quote your search terms. Including the artist might help sometimes.
+You don't need to quote your search terms. Including the artist might help sometimes. If you don't get the right song, use better search terms.
+
+INSTRUMENTALS DON'T WORK RIGHT SO DON'T BOTHER.
 
 ## Quality
 
-This code is top-quality. Pylint said so.
+This code is "top-quality". Pylint said so.
 
 ```
 $ pylint sirisings/sirisings.py
@@ -59,4 +61,4 @@ $ sirisings ain\'t no reason
 singing Ain't No Reason by Brett Dennen
 ```
 
-Siri rhythmically sings the song when it does that.
+Siri "rhythmically" "sings" the song when run.
