@@ -1,6 +1,6 @@
 # Siri Sings
 
-This app makes siri sing songs using the built-in `sirising` command. It's not quite the same as sire,
+This app makes siri sing songs using the built-in `sirising` command. It's not quite the same as siri,
 but meh, close enough.
 
 ## Installing
